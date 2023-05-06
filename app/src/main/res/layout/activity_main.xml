@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation" />
+</RelativeLayout>
+    <?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/action_favorites"
+    android:enabled="true"
+    android:icon="@drawable/ic_favorite_white_24dp"
+    android:title="@string/text_favorites"
+    app:showAsAction="ifRoom" />
+<item
+    android:id="@+id/action_schedules"
+    android:enabled="true"
+    android:icon="@drawable/ic_access_time_white_24dp"
+    android:title="@string/text_schedules"
+    app:showAsAction="ifRoom" />
+<item
+    android:id="@+id/action_music"
+    android:enabled="true"
+    android:icon="@drawable/ic_audiotrack_white_24dp"
+    android:title="@string/text_music"
+    app:showAsAction="ifRoom" />
+</menu>
+    <!-- change fill color to white -->
+<path
+android:fillColor="#FFFFFFFF"
+android:pathData="M12,21.35l-1.45,-1.32C5.4,15.36 2,12.28 2,8.5 2,5.42 4.42,3 7.5,3c1.74,0 3.41,0.81 4.5,2.09C13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.42 22,8.5c0,3.78 -3.4,6.86 -8.55,11.54L12,21.35z"/>
+    </path>
+    al bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+    bottomNavigationView.setOnItemSelectedListener { item ->
+    when (item.itemId) {
+    R.id.action_favorites ->
+    // do something here
+    true
+    R.id.action_schedules ->
+    // do something here
+    true
+    R.id.action_music ->
+    // do something here
+    true
+    else -> true
+    }
+    }
